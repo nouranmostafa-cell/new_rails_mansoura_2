@@ -7,3 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+# Seed Users
+user1 = User.create(name: "nouran", email: "nouran@example.com")
+user2 = User.create(name: "dina", email: "dina@example.com")
+
+# Seed Posts
+post1 = Post.create(title: "Post 1", content: "This is the first nouran post.", user_id:1)
+
+# Assign Editors
+post1.editors << user2
